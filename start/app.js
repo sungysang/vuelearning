@@ -18,5 +18,24 @@
 // 7. On the #voteCounter span elements, use v-on directive to call the increment or decrement methods
 // so that the vote count goes up and down each time the + or - symbols are clicked. 
 
-
+const practice = new Vue({
+    el: '#app',
+    data: {
+        title: 'myFirstProject',
+        summary: 'myFirstSummary',
+        thumbnail: {
+            src: 'https://placeimg.com/75/75/any',
+            alt: 'Placeholder image'
+        },
+        votes: 0
+    },
+    methods: {
+        increment: function() {
+            this.votes ++;
+        },
+        decrement: function() {
+            this.votes --;
+        }
+    }
+})
 

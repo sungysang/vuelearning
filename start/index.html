@@ -13,14 +13,14 @@
     <h1>Skimmit News</h1>
     <div class="post">
       <div id="voteCounter">
-        <span>+</span>
-        <span>-</span>
-        <p class="votes">Votes: </p>
+        <span v-on:click="increment">+</span>
+        <span v-on:click="decrement">-</span>
+        <p class="votes">Votes: {{ votes }}</p>
       </div>
-      <div><img src="" alt="Placeholder image"></div>
+      <div><img v-bind:src="thumbnail.src" v-bind:alt="thumbnail.alt"></div>
       <div class="post-info">
-        <h3>The Post Title</h3>
-        <p>The Post Summary</p>
+        <h3>{{ title }}</h3>
+        <p>{{ summary }}</p>
       </div>
     </div>
   </div>
